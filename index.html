@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Alat Pendakian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="container" id="loginPage">
+  <div class="login-box">
+    <h2>Login Admin</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p class="error" id="error">Username atau Password salah!</p>
+  </div>
+</div>
+
+<!-- STORE PAGE -->
+<div id="storePage">
+  <header>
+    <h1>🗻 Toko Alat Pendakian</h1>
+    <button class="logout" onclick="logout()">Logout</button>
+  </header>
+
+  <div class="products">
+    <div class="card" onclick="openModal('Carrier 60L','Carrier kuat untuk ekspedisi panjang','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee')">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+      <h3>Carrier 60L</h3>
+      <p>Rp 850.000</p>
+    </div>
+
+    <div class="card" onclick="openModal('Tenda Dome','Tenda ringan tahan hujan','https://images.unsplash.com/photo-1504280390367-361c6d9f38f4')">
+      <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" />
+      <h3>Tenda Dome</h3>
+      <p>Rp 1.200.000</p>
+    </div>
+
+    <div class="card" onclick="openModal('Sepatu Hiking','Anti slip & nyaman','https://images.unsplash.com/photo-1528701800489-20be3cbe2c67')">
+      <img src="https://images.unsplash.com/photo-1528701800489-20be3cbe2c67" />
+      <h3>Sepatu Hiking</h3>
+      <p>Rp 950.000</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">✖</span>
+    <img id="modalImg" />
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <button class="buy">Buy</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
